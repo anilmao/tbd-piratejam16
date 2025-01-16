@@ -34,6 +34,7 @@
   },
   "name":"tbd",
   "resources":[
+    {"id":{"name":"obj_test","path":"objects/obj_test/obj_test.yy",},},
     {"id":{"name":"rm_empty","path":"rooms/rm_empty/rm_empty.yy",},},
   ],
   "resourceType":"GMProject",
