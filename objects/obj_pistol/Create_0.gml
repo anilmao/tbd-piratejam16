@@ -1,0 +1,12 @@
+event_inherited();
+weapon_type = "pistol";
+weapon_sprite = spr_pistol;
+weapon_direction = 0;
+weapon_recoil = 5;
+ammo_max = 18;
+ammo_count = 18;
+bullet_type = "regular";
+bullet_damage = 1;
+bullet_speed = 10;
+possessed = false;
+can_shoot = true;

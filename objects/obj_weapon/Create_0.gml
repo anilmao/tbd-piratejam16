@@ -1,0 +1,11 @@
+weapon_type = "undefined";
+weapon_sprite = noone;
+weapon_direction = 0;
+weapon_recoil = 0;
+ammo_max = 0;
+ammo_count = 0;
+bullet_type = noone;
+bullet_damage = 0;
+bullet_speed = 0;
+possessed = false;
+can_shoot = false;
