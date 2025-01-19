@@ -9,3 +9,9 @@ bullet_damage = 0;
 bullet_speed = 0;
 possessed = false;
 can_shoot = false;
+stationary = false;
+
+h_speed = 0;
+v_speed = 1;
+weapon_gravity = 2;
+grounded = false;

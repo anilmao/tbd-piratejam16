@@ -8,5 +8,6 @@ ammo_count = 18;
 bullet_type = "regular";
 bullet_damage = 1;
 bullet_speed = 10;
-possessed = false;
+possessed = true;
 can_shoot = true;
+stationary = false;
