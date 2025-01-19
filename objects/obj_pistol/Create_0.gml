@@ -3,6 +3,7 @@ weapon_type = "pistol";
 weapon_sprite = spr_pistol;
 weapon_direction = 0;
 weapon_recoil = 5;
+barrel_offset = 1.5;
 ammo_max = 18;
 ammo_count = 18;
 bullet_type = "regular";
