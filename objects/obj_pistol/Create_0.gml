@@ -1,13 +1,10 @@
 event_inherited();
 weapon_type = "pistol";
-weapon_direction = 0;
-weapon_recoil = 5;
-barrel_offset = 1.5;
+weapon_recoil = 4;
 ammo_max = 18;
-ammo_count = 18;
+ammo_count = 999; //Originally 18
 bullet_type = "regular";
 bullet_damage = 1;
-bullet_speed = 10;
+bullet_speed = 8;
 possessed = true;
 can_shoot = true;
-stationary = false;

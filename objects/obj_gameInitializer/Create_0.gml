@@ -1,1 +1,1 @@
-alarm[0] = 5;
+show_debug_overlay(true,true,1,1);
