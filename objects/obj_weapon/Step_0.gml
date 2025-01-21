@@ -2,7 +2,7 @@ if(possessed)
 {
     persistent = true;
     
-    if(ammo_count < 0 or firedelay > 0)
+    if(ammo_count <= 0 or firedelay > 0)
         can_shoot = false;
     else
         can_shoot = true;
@@ -11,30 +11,18 @@ if(possessed)
     {
         if(mouse_check_button_pressed(mb_left))  //recoil jump "left click shot"
         {
-            ammo_count -= 1;
             firedelay = 10;
-            with(instance_create_layer(x,y,"Bullets",obj_bullet)) 
-            {
-                speed = other.bullet_speed
-                direction = other.image_angle
-                image_angle = direction
-            }
+            scr_shootBullet(id);
             scr_applyRecoil(id);
         }
             
         if(mouse_check_button_pressed(mb_right)) //regular shot "right click shot"
         {
-            ammo_count -= 1;
-            with(instance_create_layer(x,y,"Bullets",obj_bullet))
-            {
-                speed = other.bullet_speed
-                direction = other.image_angle
-                image_angle = direction
-            }
+            scr_shootBullet(id);
         }
     }
     
-    // Vertical Collision
+    // Horizontal Collision
     if(place_meeting(x + h_speed, y, obj_collisionBlock))
     {
         while(!place_meeting(x+sign(h_speed),y,obj_collisionBlock))
@@ -45,7 +33,7 @@ if(possessed)
     }
     x = x + h_speed;
     
-    // Horizontal Collision
+    // Vertical Collision
     if(place_meeting(x, y + v_speed, obj_collisionBlock))
     {
         while(!place_meeting(x,y+sign(v_speed),obj_collisionBlock))
