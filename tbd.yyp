@@ -43,6 +43,7 @@
     {"id":{"name":"rm_debug","path":"rooms/rm_debug/rm_debug.yy",},},
     {"id":{"name":"rm_empty","path":"rooms/rm_empty/rm_empty.yy",},},
     {"id":{"name":"rm_gameInitialization","path":"rooms/rm_gameInitialization/rm_gameInitialization.yy",},},
+    {"id":{"name":"scr_shootingFunctions","path":"scripts/scr_shootingFunctions/scr_shootingFunctions.yy",},},
     {"id":{"name":"spr_bullet","path":"sprites/spr_bullet/spr_bullet.yy",},},
     {"id":{"name":"spr_camera","path":"sprites/spr_camera/spr_camera.yy",},},
     {"id":{"name":"spr_collisionBlock","path":"sprites/spr_collisionBlock/spr_collisionBlock.yy",},},

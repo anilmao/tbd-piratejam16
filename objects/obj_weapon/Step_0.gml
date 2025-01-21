@@ -2,35 +2,36 @@ if(possessed)
 {
     persistent = true;
     
-    if(mouse_check_button_pressed(mb_left) && can_shoot && ammo_count > 0 && firedelay < 0) //recoil jump "left click shot"
-    {
-        ammo_count -= 1;
-        firedelay = 10;
-        with(instance_create_layer(x,y,"Bullets",obj_bullet))
-        {
-            speed = other.bullet_speed
-            direction = other.image_angle
-            image_angle = direction
-        }
-        recoil_jump = true
-    }
+    if(ammo_count < 0 or firedelay > 0)
+        can_shoot = false;
+    else
+        can_shoot = true;
     
-    if(mouse_check_button_pressed(mb_right) && can_shoot && ammo_count > 0 && !recoil_jump && firedelay < 0) //regular shot "right click shot"
+    if(can_shoot)
     {
-        ammo_count -= 1;
-        with(instance_create_layer(x,y,"Bullets",obj_bullet))
+        if(mouse_check_button_pressed(mb_left))  //recoil jump "left click shot"
         {
-            speed = other.bullet_speed
-            direction = other.image_angle
-            image_angle = direction
+            ammo_count -= 1;
+            firedelay = 10;
+            with(instance_create_layer(x,y,"Bullets",obj_bullet)) 
+            {
+                speed = other.bullet_speed
+                direction = other.image_angle
+                image_angle = direction
+            }
+            scr_applyRecoil(id);
         }
-    }
-    
-    if(recoil_jump)
-    {
-        h_speed = lengthdir_x(weapon_recoil,image_angle+180)
-        v_speed = lengthdir_y(weapon_recoil,image_angle*-1)
-        recoil_jump = false
+            
+        if(mouse_check_button_pressed(mb_right)) //regular shot "right click shot"
+        {
+            ammo_count -= 1;
+            with(instance_create_layer(x,y,"Bullets",obj_bullet))
+            {
+                speed = other.bullet_speed
+                direction = other.image_angle
+                image_angle = direction
+            }
+        }
     }
     
     // Vertical Collision
