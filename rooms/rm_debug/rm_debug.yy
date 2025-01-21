@@ -13,17 +13,23 @@
     {"name":"inst_221FA5BD","path":"rooms/rm_debug/rm_debug.yy",},
     {"name":"inst_7E97D69D","path":"rooms/rm_debug/rm_debug.yy",},
     {"name":"inst_77748D7C","path":"rooms/rm_debug/rm_debug.yy",},
+    {"name":"inst_2434199B","path":"rooms/rm_debug/rm_debug.yy",},
+    {"name":"inst_37B03E1E","path":"rooms/rm_debug/rm_debug.yy",},
+    {"name":"inst_9C2EC7A","path":"rooms/rm_debug/rm_debug.yy",},
   ],
   "isDnd":false,
   "layers":[
     {"$GMRInstanceLayer":"","%Name":"Bullets","depth":0,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[],"layers":[],"name":"Bullets","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Gun","depth":100,"effectEnabled":true,"effectType":null,"gridX":16,"gridY":16,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v1","%Name":"inst_381B1F8F","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_381B1F8F","objectId":{"name":"obj_pistol","path":"objects/obj_pistol/obj_pistol.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":112.0,"y":64.0,},
+        {"$GMRInstance":"v1","%Name":"inst_2434199B","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_2434199B","objectId":{"name":"obj_player_ghoul","path":"objects/obj_player_ghoul/obj_player_ghoul.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":112.0,"y":96.0,},
+        {"$GMRInstance":"v1","%Name":"inst_37B03E1E","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_37B03E1E","objectId":{"name":"obj_pistol","path":"objects/obj_pistol/obj_pistol.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":144.0,"y":144.0,},
+        {"$GMRInstance":"v1","%Name":"inst_9C2EC7A","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_9C2EC7A","objectId":{"name":"obj_shotgun","path":"objects/obj_shotgun/obj_shotgun.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":224.0,"y":144.0,},
       ],"layers":[],"name":"Gun","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRTileLayer":"","%Name":"Foreground","depth":200,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Foreground","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":12,"SerialiseWidth":20,"TileCompressedData":[
-          -45,-2147483648,-5,0,-14,-2147483648,-7,0,2,-2147483648,0,-11,-2147483648,-8,0,-14,-2147483648,-6,0,
-          -4,-2147483648,1,13,-3,17,-16,-2147483648,1,15,-3,5,-16,-2147483648,1,15,-3,5,-16,-2147483648,1,15,-3,
-          5,-16,-2147483648,1,15,-3,5,-16,17,1,19,-23,5,
+          -45,-2147483648,-5,0,-14,-2147483648,-7,0,2,-2147483648,0,-11,-2147483648,-8,0,-4,-2147483648,1,30,-3,
+          31,-6,-2147483648,-6,0,-4,-2147483648,4,3,4,1,5,-16,-2147483648,1,9,-3,28,-16,-2147483648,1,9,-3,28,
+          -16,-2147483648,1,9,-3,28,-16,31,1,9,-3,28,1,6,-6,4,1,25,-5,4,4,34,4,5,9,-3,28,1,27,-15,28,1,27,-3,28,
         ],"TileDataFormat":1,},"tilesetId":{"name":"tset_facilityFore","path":"tilesets/tset_facilityFore/tset_facilityFore.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
     {"$GMRInstanceLayer":"","%Name":"Collisions","depth":300,"effectEnabled":true,"effectType":null,"gridX":8,"gridY":8,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v1","%Name":"inst_461E1984","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_461E1984","objectId":{"name":"obj_collisionBlock","path":"objects/obj_collisionBlock/obj_collisionBlock.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":17.0,"scaleY":1.5,"x":136.0,"y":172.0,},

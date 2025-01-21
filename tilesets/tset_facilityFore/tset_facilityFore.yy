@@ -1,16 +1,15 @@
 {
   "$GMTileSet":"v1",
   "%Name":"tset_facilityFore",
-  "autoTileSets":[
-    {"$GMAutoTileSet":"","%Name":"autotile_1","closed_edge":false,"name":"autotile_1","resourceType":"GMAutoTileSet","resourceVersion":"2.0","tiles":[1,6,7,8,9,10,11,12,13,14,15,16,17,18,19,5,],},
-  ],
+  "autoTileSets":[],
   "macroPageTiles":{
-    "SerialiseHeight":0,
-    "SerialiseWidth":0,
-    "TileSerialiseData":[],
+    "SerialiseHeight":10,
+    "SerialiseWidth":15,
+    "TileCompressedData":[-150,0,],
+    "TileDataFormat":1,
   },
   "name":"tset_facilityFore",
-  "out_columns":8,
+  "out_columns":7,
   "out_tilehborder":2,
   "out_tilevborder":2,
   "parent":{
@@ -20,8 +19,8 @@
   "resourceType":"GMTileSet",
   "resourceVersion":"2.0",
   "spriteId":{
-    "name":"spr_overworldSheet",
-    "path":"sprites/spr_overworldSheet/spr_overworldSheet.yy",
+    "name":"spr_FacilityTileset",
+    "path":"sprites/spr_FacilityTileset/spr_FacilityTileset.yy",
   },
   "spriteNoExport":false,
   "textureGroupId":{
@@ -36,5 +35,5 @@
   "tileWidth":16,
   "tilexoff":0,
   "tileyoff":0,
-  "tile_count":64,
+  "tile_count":56,
 }

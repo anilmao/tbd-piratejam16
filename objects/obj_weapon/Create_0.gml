@@ -11,4 +11,4 @@ h_speed = 0;
 v_speed = 1;
 weapon_gravity = 0.15;  //try this with 0.1 and tell me if it feels worse/better for control - Ani
 grounded = false;
-firedelay = 0;          //in frames
+firedelay = 0;  //in frames
