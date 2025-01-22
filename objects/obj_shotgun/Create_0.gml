@@ -8,3 +8,4 @@ bullet_damage = 4;
 bullet_speed = 6;
 possessed = false;
 can_shoot = true;
+outline_sprite = spr_shotgun_outline;
