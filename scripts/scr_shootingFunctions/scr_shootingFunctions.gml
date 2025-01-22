@@ -26,7 +26,7 @@ function scr_pushobject()
 {
     if(place_meeting(x,y+1,obj_collisionBlock)) //this is for checking if the player is in a wall, and if they are they get pushed out
     {
-        for(var i = 0; i < game_get_speed(gamespeed_fps); i++)
+        for(var i = 0; i < game_get_speed(gamespeed_microseconds); i++)
         {
             if(!place_meeting(x + i, y, obj_collisionBlock))
             {

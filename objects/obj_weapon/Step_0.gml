@@ -33,16 +33,6 @@ if(possessed)
         }
     }
     
-    if(keyboard_check_pressed(vk_space))
-    {
-        keyboard_clear(vk_space);
-        possessed = false;
-        with(obj_player_ghoul)
-        {
-            in_weapon = false;
-        }
-    }
-    
     // Horizontal Collision
     if(place_meeting(x + h_speed, y, obj_collisionBlock))
     {
@@ -92,5 +82,3 @@ else
 }
 
 v_speed += weapon_gravity; //Apply Gravity
-
-show_debug_message(firedelay)

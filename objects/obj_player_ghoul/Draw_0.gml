@@ -10,11 +10,11 @@ else
 
 if(in_weapon)
 {
-    image_angle = point_direction(x,y,nearest_weapon,nearest_weapon)
+    image_angle = point_direction(x,y,0,0);
 }
 else
 {
     image_angle = 0;
 }
 
-draw_circle_color(x,y,30,#b0e4e4,#b0e4e4,true);
+draw_circle_color(x,y,player_collect_radius,#b0e4e4,#b0e4e4,true);
