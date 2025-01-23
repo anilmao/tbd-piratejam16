@@ -17,4 +17,6 @@ else
     image_angle = 0;
 }
 
-draw_circle_color(x,y,player_collect_radius,#b0e4e4,#b0e4e4,true);
+draw_circle_color(x,y,player_possess_radius,#b0e4e4,#b0e4e4,true);
+
+//draw_line(x,y,mouse_x,mouse_y)
