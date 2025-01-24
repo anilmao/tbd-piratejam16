@@ -106,10 +106,39 @@ function scr_BigGun()
         
         if(can_shoot)
         {
-            if(mouse_check_button_pressed(mb_left)) //regular shot
+            if(mouse_check_button(mb_left)) //regular shot
             {
                 scr_shootBullet(id);
+                image_index = 2;
+                image_speed = 1;
             }
+        }
+    }
+    else
+    {
+        if(flipped == 1) 
+        {
+            if(image_angle != 180)
+            {
+                image_angle = lerp(image_angle, -180, 0.2);
+            }
+        }
+        else
+        {
+            if(image_angle != 0)
+            {
+                image_angle = lerp(image_angle, 0, 0.2);
+            }
+        }
+        
+        //this shit is very hacky but its gonna get us through the jam whilst looking decent
+        if(collision_circle(x,y,obj_player_ghoul.player_possess_radius,obj_player_ghoul,false,true) && instance_position(mouse_x,mouse_y,self))
+        {
+            selected = true;
+        }
+        else
+        {
+            selected = false;
         }
     }
 }

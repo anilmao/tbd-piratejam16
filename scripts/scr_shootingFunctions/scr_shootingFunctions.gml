@@ -12,7 +12,7 @@ function scr_shootBullet(obj_id)
     with(obj_id)
     {
         ammo_count -= 1;
-        firedelay = 10;
+        firedelay = 9;
         with(instance_create_layer(x,y,"Bullets",obj_bullet)) 
         {
             speed = other.bullet_speed

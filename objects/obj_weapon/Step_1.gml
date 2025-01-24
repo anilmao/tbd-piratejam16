@@ -1,5 +1,6 @@
 if(possessed)
 {
+    depth = -1;
     switch(weapon_type)
     {
         case "pistol":
@@ -23,4 +24,8 @@ if(possessed)
             }
         break;
     }
+}
+else
+{
+    depth = 0;
 }

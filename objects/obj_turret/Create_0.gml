@@ -9,3 +9,4 @@ bullet_speed = 8;
 possessed = false;
 can_shoot = true;
 outline_sprite = spr_turret_head_outline;
+firedelay = 5;
