@@ -1,5 +1,14 @@
 function scr_NormalWeapon()
 {
+    if(place_meeting(x,y+2,obj_collisionBlock))
+    {
+        grounded = true;
+    }
+    else
+    {
+        grounded = false;
+    }
+    
     if(possessed)
     {
         selected = false;
@@ -63,7 +72,7 @@ function scr_NormalWeapon()
         if(grounded)
         {
             h_speed = 0;
-            v_speed = 0; 
+            v_speed = 0;
         }
         else
         {

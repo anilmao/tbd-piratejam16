@@ -1,5 +1,5 @@
 event_inherited();
-weapon_type = "biggun1";
+weapon_type = "biggun2";
 weapon_recoil = 4;
 ammo_max = 18;
 ammo_count = 999; //Originally 18
