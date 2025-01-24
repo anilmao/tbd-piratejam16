@@ -25,7 +25,7 @@ if(in_weapon)
 }
 else
 {
-    nearest_inst = instance_nearest(x,y,obj_weapon);
+    var nearest_inst = instance_nearest(x,y,obj_weapon);
     
     sprite_index = spr_player_possess;
     

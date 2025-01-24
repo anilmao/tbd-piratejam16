@@ -1,17 +1,20 @@
 {
   "$GMObject":"",
-  "%Name":"obj_gameInitializer",
+  "%Name":"obj_turret",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_gameInitializer",
+  "name":"obj_turret",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
     "path":"folders/Objects.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_weapon",
+    "path":"objects/obj_weapon/obj_weapon.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -29,7 +32,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_pistol",
+    "path":"sprites/spr_pistol/spr_pistol.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }
