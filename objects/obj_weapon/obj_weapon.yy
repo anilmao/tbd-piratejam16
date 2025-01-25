@@ -30,6 +30,8 @@
   "physicsStartAwake":true,
   "properties":[
     {"$GMObjectProperty":"v1","%Name":"flipped","filters":[],"listItems":[],"multiselect":false,"name":"flipped","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"1","varType":1,},
+    {"$GMObjectProperty":"v1","%Name":"ammo_count","filters":[],"listItems":[],"multiselect":false,"name":"ammo_count","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":0,},
+    {"$GMObjectProperty":"v1","%Name":"ammo_count_max","filters":[],"listItems":[],"multiselect":false,"name":"ammo_count_max","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"ammo_count","varType":0,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

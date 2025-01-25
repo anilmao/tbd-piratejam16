@@ -14,10 +14,17 @@ function scr_NormalWeapon()
         selected = false;
         persistent = true;
         
-        if(ammo_count <= 0)
+        if(ammo_count < 999)
+        {
+            if(ammo_count <= 0)
             can_shoot = false;
+            else
+                can_shoot = true;
+        }
         else
+        {
             can_shoot = true;
+        }
         
         if(can_shoot)
         {

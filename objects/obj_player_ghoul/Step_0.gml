@@ -12,7 +12,6 @@ if(in_weapon)
                 other.at_weapon = false;
                 scr_WeaponSwap(hover);
             }
-            weap_target = hover.id;
         }
     }
     
@@ -20,7 +19,6 @@ if(in_weapon)
     {
         x = my_weapon.x;
         y = my_weapon.y;
-        weap_target = noone;
     }
 }
 else

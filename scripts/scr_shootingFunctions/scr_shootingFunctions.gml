@@ -11,7 +11,10 @@ function scr_shootBullet(obj_id)
 {
     with(obj_id)
     {
-        ammo_count -= 1;
+        if(ammo_count < 999)
+        {
+            ammo_count -= 1;
+        }
         firedelay = 9;
         with(instance_create_layer(x,y,"Bullets",obj_bullet)) 
         {

@@ -1,8 +1,8 @@
 event_inherited();
 weapon_type = "shotgun";
 weapon_recoil = 7;
-ammo_max = 2;
-ammo_count = 999; //Originally 2
+ammo_count = 2;
+ammo_max = ammo_count;
 bullet_type = "shell"; //this doesnt do anything yet
 bullet_damage = 4;
 bullet_speed = 6;

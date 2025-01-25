@@ -31,12 +31,14 @@ if(at_weapon)
             var bullet_ui_offset_x = 4
             var bullet_ui_offset_y = 8
             
-            if(i <= 22)
+            if(my_weapon.ammo_count < 999)
             {
                 draw_sprite(spr_bullet_ui,0,camera_get_view_x(view_camera[0])+270 + ((i mod ammo_ui_w) * bullet_ui_offset_x), camera_get_view_y(view_camera[0])+162 + ((i div ammo_ui_w) * bullet_ui_offset_y));
+            }
+            else 
+            {
+                draw_sprite(spr_infinity,0,camera_get_view_x(view_camera[0])+283,camera_get_view_y(view_camera[0])+163);
             }
         }
     }
 }
-
-//draw_circle_color(x,y,player_possess_radius,#b0e4e4,#b0e4e4,true);
