@@ -14,22 +14,53 @@ function scr_NormalWeapon()
         selected = false;
         persistent = true;
         
-        if(ammo_count <= 0 || firedelay > 0)
+        if(ammo_count <= 0)
             can_shoot = false;
         else
             can_shoot = true;
         
         if(can_shoot)
         {
-            if(mouse_check_button_pressed(mb_left))  //recoil jump "left click shot"
+            if(firedelay < 0)
             {
-                scr_shootBullet(id);
-                scr_applyRecoil(id);
-            }
+                if(mouse_check_button_pressed(mb_left))  //recoil jump "left click shot"
+                {
+                    scr_shootBullet(id);
+                    scr_applyRecoil(id);
+                }
                 
-            if(mouse_check_button_pressed(mb_right)) //regular shot "right click shot"
+                if(mouse_check_button_pressed(mb_right)) //regular shot "right click shot"
+                {
+                    scr_shootBullet(id);
+                }
+                if(mouse_check_button_pressed(mb_left) || mouse_check_button_pressed(mb_right))
+                {
+                    switch(weapon_type)
+                    {
+                        case "pistol":
+                            audio_play_sound(snd_pistol_fire,0,false,1,undefined,random_range(0.8,1.2));
+                        break;
+                        case "shotgun":
+                            audio_play_sound(snd_shotgun_fire,0,false,1,undefined,random_range(0.8,1.2));
+                        break;
+                        case "energy": //end weapon 
+                               
+                        break;
+                    }
+                }
+            }
+        }
+        else
+        {
+            if(firedelay < 0)
             {
-                scr_shootBullet(id);
+                if(mouse_check_button_pressed(mb_left) || mouse_check_button_pressed(mb_right)) //no more bullets
+                {
+                    if(!audio_is_playing(snd_gun_empty))
+                    {
+                        audio_play_sound(snd_gun_empty,0,false);
+                    }
+                }
             }
         }
         
@@ -99,24 +130,60 @@ function scr_BigGun()
     {
         selected = false;
         
-        if(ammo_count <= 0 || firedelay > 0)
+        if(ammo_count <= 0)
             can_shoot = false;
         else
             can_shoot = true;
         
         if(can_shoot)
         {
-            if(mouse_check_button(mb_left)) //regular shot
+            if(weapon_type == "biggun2")
             {
-                scr_shootBullet(id);
-                image_index = 2;
-                image_speed = 1;
+                if(mouse_check_button(mb_left)) //regular shot
+                {
+                    if(firedelay < 0)
+                    {
+                        scr_shootBullet(id);
+                        image_speed = 0.6;
+                    }
+                    
+                    if(!audio_is_playing(snd_turret_fire_loop)) 
+                    { 
+                        audio_play_sound(snd_turret_fire_loop,0,true);
+                    }
+                }
+                else
+                {
+                    if(weapon_type == "biggun2")
+                    {
+                        image_index = 0;
+                        image_speed = 0;
+                        audio_stop_sound(snd_turret_fire_loop);
+                    }
+                }
+            }
+        }
+        else
+        {
+            if(weapon_type == "biggun2")
+            {
+                image_index = 0;
+                image_speed = 0;
+                audio_stop_sound(snd_turret_fire_loop);
+            }
+            
+            if(mouse_check_button(mb_left)) //no more bullets
+            {
+                if(!audio_is_playing(snd_gun_empty))
+                {
+                    audio_play_sound(snd_gun_empty,0,false);
+                }
             }
         }
     }
     else
     {
-        if(flipped == 1) 
+        if(flipped == 1)
         {
             if(image_angle != 180)
             {

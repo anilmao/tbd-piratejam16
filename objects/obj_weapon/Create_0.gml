@@ -14,3 +14,4 @@ grounded = false;
 firedelay = 0;  //in frames
 selected = false;
 outline_sprite = -1;
+image_speed = 0;

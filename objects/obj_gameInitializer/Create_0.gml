@@ -3,10 +3,10 @@ window_set_cursor(cr_cross);
 scr_ScaleGame(); //scales the game in-browser
 
 global.player_score = 0;
-global.debug = true; //turn this off before the jam ends
+global.debug = false; //turn this off before the release
 game_paused = true;
 kills = 0;
-show_ui = true;
+global.show_ui = true;
 
 
 

@@ -12,15 +12,15 @@ if(in_weapon)
                 other.at_weapon = false;
                 scr_WeaponSwap(hover);
             }
+            weap_target = hover.id;
         }
     }
-    
-    image_alpha = 0;
     
     if(at_weapon)
     {
         x = my_weapon.x;
         y = my_weapon.y;
+        weap_target = noone;
     }
 }
 else
@@ -29,8 +29,9 @@ else
     
     sprite_index = spr_player_possess;
     
-    image_alpha = 1;
-    if(my_weapon == noone)
+    image_angle = point_direction(x,y,nearest_inst.x,nearest_inst.y);
+    
+    if(my_weapon == noone) //the player automatically goes into the nearest weapon (could be used for the first level as a "cutscene")
     {
         x = lerp(x, nearest_inst.x, 0.1);
         y = lerp(y, nearest_inst.y, 0.1);
