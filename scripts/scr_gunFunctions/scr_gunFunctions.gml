@@ -16,7 +16,7 @@ function scr_NormalWeapon()
         
         if(ammo_count < 999)
         {
-            if(ammo_count <= 0)
+            if(ammo_count <= 0 && instance_exists(obj_fader))
             can_shoot = false;
             else
                 can_shoot = true;
@@ -118,14 +118,17 @@ function scr_NormalWeapon()
             scr_pushobject(); //decreased the increment from gamespeed to 5 frames, works good so far (not fully tested) with WAY less framedrops
         }
         
-        //this shit is very hacky but its gonna get us through the jam whilst looking decent
-        if(collision_circle(x,y,obj_player_ghoul.player_possess_radius,obj_player_ghoul,false,true) && instance_position(mouse_x,mouse_y,self))
+        if(instance_exists(obj_player_ghoul))
         {
-            selected = true;
-        }
-        else
-        {
-            selected = false;
+            //this shit is very hacky but its gonna get us through the jam whilst looking decent
+            if(collision_circle(x,y,obj_player_ghoul.player_possess_radius,obj_player_ghoul,false,true) && instance_position(mouse_x,mouse_y,self))
+            {
+                selected = true;
+            }
+            else
+            {
+                selected = false;
+            }
         }
     }
     
@@ -137,7 +140,7 @@ function scr_BigGun()
     {
         selected = false;
         
-        if(ammo_count <= 0)
+        if(ammo_count <= 0 && instance_exists(obj_fader))
             can_shoot = false;
         else
             can_shoot = true;
@@ -205,14 +208,17 @@ function scr_BigGun()
             }
         }
         
-        //this shit is very hacky but its gonna get us through the jam whilst looking decent
-        if(collision_circle(x,y,obj_player_ghoul.player_possess_radius,obj_player_ghoul,false,true) && instance_position(mouse_x,mouse_y,self))
+        if(instance_exists(obj_player_ghoul))
         {
-            selected = true;
-        }
-        else
-        {
-            selected = false;
+            //this shit is very hacky but its gonna get us through the jam whilst looking decent
+            if(collision_circle(x,y,obj_player_ghoul.player_possess_radius,obj_player_ghoul,false,true) && instance_position(mouse_x,mouse_y,self))
+            {
+                selected = true;
+            }
+            else
+            {
+                selected = false;
+            }
         }
     }
 }
