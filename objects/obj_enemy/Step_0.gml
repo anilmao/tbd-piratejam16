@@ -1,6 +1,7 @@
-switch(enemy_state)
+if(enemy_state == "chill")
 {
-    case "chill":
-        
-    break;
+    if(collision_line(x,y,obj_player_ghoul.x,obj_player_ghoul.y,obj_player_ghoul,false,true))
+    {
+        show_debug_message("I SEE THE GHOUL");   
+    }
 }

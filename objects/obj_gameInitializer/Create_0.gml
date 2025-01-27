@@ -1,12 +1,11 @@
 //non debug stuff
-window_set_cursor(cr_cross);
 scr_ScaleGame(); //scales the game in-browser
 
 global.player_score = 0;
 global.debug = false; //turn this off before the release
+global.show_ui = true; //show AMMO UI?
 game_paused = true;
 kills = 0;
-global.show_ui = true;
 
 
 

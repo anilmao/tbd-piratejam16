@@ -16,7 +16,7 @@ function scr_NormalWeapon()
         
         if(ammo_count < 999)
         {
-            if(ammo_count <= 0 && instance_exists(obj_fader))
+            if(ammo_count <= 0)
             can_shoot = false;
             else
                 can_shoot = true;
@@ -140,7 +140,7 @@ function scr_BigGun()
     {
         selected = false;
         
-        if(ammo_count <= 0 && instance_exists(obj_fader))
+        if(ammo_count <= 0)
             can_shoot = false;
         else
             can_shoot = true;
