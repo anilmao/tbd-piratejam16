@@ -1,7 +1,7 @@
 if(in_weapon)
 {
     var hover = instance_position(mouse_x,mouse_y,obj_weapon);
-
+    
     if((keyboard_check_pressed(vk_space)))
     {
         with(hover)

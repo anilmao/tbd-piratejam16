@@ -1,7 +1,7 @@
 event_inherited();
 weapon_type = "pistol";
 weapon_recoil = 4;
-ammo_max = 11;
+ammo_max =11;
 ammo_count = ammo_max;
 bullet_type = "regular";
 bullet_damage = 1;
