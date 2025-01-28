@@ -12,3 +12,5 @@ switch(enemy_state)
         sprite_index = spr_enemy_dead;
     break;
 }
+
+draw_line_width_color(x,y,obj_player_ghoul.x,obj_player_ghoul.y,2,c_red,c_red);

@@ -27,56 +27,51 @@ function scr_shootBullet(obj_id)
 
 function scr_pushobject()
 {
-    if(place_meeting(x,y+1,obj_collisionBlock)) //this is for checking if the player is in a wall, and if they are they get pushed out
+    for(var i = 0; i < 5; i++) 
     {
-        for(var i = 0; i < 5; i++)
+        if(!place_meeting(x + i, y, obj_collisionBlock))
         {
-            if(!place_meeting(x + i, y, obj_collisionBlock))
-            {
-                x+=i;
-                break;
-            }
-            if(!place_meeting(x - i, y, obj_collisionBlock))
-            {
-                x-=i;
-                break;
-            }
-            if(!place_meeting(x, y+i, obj_collisionBlock))
-            {
-                y+=i;
-                break;
-            }
-            if(!place_meeting(x, y-i, obj_collisionBlock))
-            {
-                y-=i;
-                break;
-            }
-            if(!place_meeting(x+i, y-i, obj_collisionBlock))
-            {
-                x+=i;
-                y-=i;
-                break;
-            }
-            if(!place_meeting(x-i, y-i, obj_collisionBlock))
-            {
-                x-=i;
-                y-=i;
-                break;
-            }
-            if(!place_meeting(x+i, y+i, obj_collisionBlock))
-            {
-                x+=i;
-                y+=i;
-                break;
-            }
-            if(!place_meeting(x-i, y+i, obj_collisionBlock))
-            {
-                x-=i;
-                y+=i;
-                break;
-            }
+            x+=i;
+            break;
         }
-        h_speed = 0;
-        v_speed = 0;
+        if(!place_meeting(x - i, y, obj_collisionBlock))
+        {
+            x-=i;
+            break;
+        }
+        if(!place_meeting(x, y+i, obj_collisionBlock))
+        {
+            y+=i;
+            break;
+        }
+        if(!place_meeting(x, y-i, obj_collisionBlock))
+        {
+            y-=i;
+            break;
+        }
+        if(!place_meeting(x+i, y-i, obj_collisionBlock))
+        {
+            x+=i;
+            y-=i;
+            break;
+        }
+        if(!place_meeting(x-i, y-i, obj_collisionBlock))
+        {
+            x-=i;
+            y-=i;
+            break;
+        }
+        if(!place_meeting(x+i, y+i, obj_collisionBlock))
+        {
+            x+=i;
+            y+=i;
+            break;
+        }
+        if(!place_meeting(x-i, y+i, obj_collisionBlock))
+        {
+            x-=i;
+            y+=i; 
+            break;
+        }
     }
 }

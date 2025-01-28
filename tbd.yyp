@@ -91,6 +91,7 @@
     {"id":{"name":"spr_cannon_head","path":"sprites/spr_cannon_head/spr_cannon_head.yy",},},
     {"id":{"name":"spr_collisionBlock","path":"sprites/spr_collisionBlock/spr_collisionBlock.yy",},},
     {"id":{"name":"spr_cursor","path":"sprites/spr_cursor/spr_cursor.yy",},},
+    {"id":{"name":"spr_empty","path":"sprites/spr_empty/spr_empty.yy",},},
     {"id":{"name":"spr_enemy_base","path":"sprites/spr_enemy_base/spr_enemy_base.yy",},},
     {"id":{"name":"spr_enemy_dead","path":"sprites/spr_enemy_dead/spr_enemy_dead.yy",},},
     {"id":{"name":"spr_enemy_hands_alert","path":"sprites/spr_enemy_hands_alert/spr_enemy_hands_alert.yy",},},

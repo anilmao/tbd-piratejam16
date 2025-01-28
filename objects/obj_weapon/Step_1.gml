@@ -2,6 +2,7 @@ if(possessed)
 {
     depth = -1;
     image_blend = make_color_rgb(150,225,255);
+    
     switch(weapon_type)
     {
         case "pistol":

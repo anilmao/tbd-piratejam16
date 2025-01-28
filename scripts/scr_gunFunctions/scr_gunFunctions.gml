@@ -11,7 +11,6 @@ function scr_NormalWeapon()
     
     if(possessed)
     {
-        selected = false;
         persistent = true;
         
         if(ammo_count < 999)
@@ -50,7 +49,7 @@ function scr_NormalWeapon()
                         case "shotgun":
                             audio_play_sound(snd_shotgun_fire,0,false,1,undefined,random_range(0.8,1.2));
                         break;
-                        case "energy": //end weapon 
+                        case "energy": //ending weapon 
                                
                         break;
                     }
@@ -76,7 +75,7 @@ function scr_NormalWeapon()
         {
             while(!place_meeting(x+sign(h_speed),y,obj_collisionBlock))
             {
-            x = x + sign(h_speed) 
+                x = x + sign(h_speed) 
             }    
             h_speed = 0;
         }
@@ -102,11 +101,24 @@ function scr_NormalWeapon()
             image_yscale = 1;
         }
         
-        scr_pushobject(); //decreased the increment from gamespeed to 5 frames, works good so far (not fully tested) with WAY less framedrops
+        if(!grounded)
+        {
+            v_speed += weapon_gravity; //Apply Gravity
+        }
+        else
+        {
+            if(h_speed != 0)
+            {
+                h_speed = lerp(h_speed, 0, 0.1);
+            }                    
+        }
+        scr_pushobject();
+        selected = false;
     }
     else 
     { 
         persistent = false;
+        
         if(grounded)
         {
             h_speed = 0;
@@ -114,16 +126,25 @@ function scr_NormalWeapon()
         }
         else
         {
-            y = y + v_speed;
-            scr_pushobject(); //decreased the increment from gamespeed to 5 frames, works good so far (not fully tested) with WAY less framedrops
+            y += 3; //Apply Gravity but shittier
         }
         
         if(instance_exists(obj_player_ghoul))
         {
-            //this shit is very hacky but its gonna get us through the jam whilst looking decent
-            if(collision_circle(x,y,obj_player_ghoul.player_possess_radius,obj_player_ghoul,false,true) && instance_position(mouse_x,mouse_y,self))
+            if(collision_circle(x,y,obj_player_ghoul.player_possess_radius,self,false,false) && collision_circle(mouse_x,mouse_y,obj_player_ghoul.mouse_radius,self,false,false))
             {
                 selected = true;
+                if((keyboard_check_pressed(vk_space)))
+                {
+                    keyboard_clear(vk_space);
+                    with(obj_player_ghoul)
+                    {
+                        my_weapon.possessed = false;
+                        in_weapon = false;
+                        scr_WeaponSwap(other);
+                        //show_debug_message(string(my_weapon) + " " + string(at_weapon))
+                    }
+                }
             }
             else
             {
@@ -131,8 +152,6 @@ function scr_NormalWeapon()
             }
         }
     }
-    
-    v_speed += weapon_gravity; //Apply Gravity
 }
 function scr_BigGun()
 {
@@ -210,10 +229,20 @@ function scr_BigGun()
         
         if(instance_exists(obj_player_ghoul))
         {
-            //this shit is very hacky but its gonna get us through the jam whilst looking decent
-            if(collision_circle(x,y,obj_player_ghoul.player_possess_radius,obj_player_ghoul,false,true) && instance_position(mouse_x,mouse_y,self))
+            if(collision_circle(x,y,obj_player_ghoul.player_possess_radius,self,false,false) && collision_circle(mouse_x,mouse_y,obj_player_ghoul.mouse_radius,self,false,false))
             {
                 selected = true;
+                if((keyboard_check_pressed(vk_space)))
+                {
+                    keyboard_clear(vk_space);
+                    with(obj_player_ghoul)
+                    {
+                        my_weapon.possessed = false;
+                        in_weapon = false;
+                        scr_WeaponSwap(other);
+                        //show_debug_message(string(my_weapon) + " " + string(at_weapon))
+                    }
+                }
             }
             else
             {
