@@ -14,9 +14,12 @@ if(fade_state == 0) //transition start
     {
         with(obj_player_ghoul)
         {
-            my_weapon.h_speed = 0;
-            my_weapon.v_speed = 0;
-            my_weapon.can_shoot = false;
+            if(my_weapon != noone)
+            {
+                my_weapon.h_speed = 0;
+                my_weapon.v_speed = 0;
+                my_weapon.can_shoot = false;
+            }
         }
     }
     
@@ -31,9 +34,12 @@ else //transition end
     {
         with(obj_player_ghoul)
         {
-            my_weapon.x = other.warp_x;
-            my_weapon.y = other.warp_y;
-            my_weapon.can_shoot = false;
+            if(my_weapon != noone)
+            {
+                my_weapon.x = other.warp_x;
+                my_weapon.y = other.warp_y;
+                my_weapon.can_shoot = false;
+            }
         }
     }
     if(fade_radius > 0)

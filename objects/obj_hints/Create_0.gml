@@ -1,0 +1,13 @@
+hint_msg[0] = "Use the left mouse to \npush your weapon with recoil!"
+hint_msg[1] = "Use the right mouse to \nshoot without recoil."
+hint_msg[2] = "When killed, enemies drop their weapon."
+hint_msg[3] = "Shotguns are great for fast movement,\nhowever they only have two shells."
+hint_msg[4] = "Looks like the enemies are trying to stop you,\nYou have to stop them!"
+hint_msg[5] = "The turrets provide endless ammo,\nuse them to your advantage!"
+hint_msg[6] = "Press R to restart the current level\nif you are stuck!"
+popup_x = camera_get_view_x(view_camera[0])+600;
+popup_y = camera_get_view_y(view_camera[0])+20;
+hint = -1;
+msg_num = 0;
+msg_time = 600;
+msg_timer = msg_time;

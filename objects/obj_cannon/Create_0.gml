@@ -1,0 +1,11 @@
+weapon_type = "biggun1";
+weapon_recoil = 0;
+ammo_count = 1;
+ammo_max = ammo_count;
+bullet_type = "regular";
+bullet_damage = 1;
+bullet_speed = 10;
+possessed = false;
+can_shoot = true;
+outline_sprite = spr_cannon_head_outline;
+firedelay = 10;

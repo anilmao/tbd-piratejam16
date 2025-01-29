@@ -1,0 +1,2 @@
+type = "exit";
+text = "Quit";

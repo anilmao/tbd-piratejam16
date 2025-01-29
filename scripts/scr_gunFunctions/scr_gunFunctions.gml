@@ -131,7 +131,7 @@ function scr_NormalWeapon()
         
         if(instance_exists(obj_player_ghoul))
         {
-            if(collision_circle(x,y,obj_player_ghoul.player_possess_radius,self,false,false) && collision_circle(mouse_x,mouse_y,obj_player_ghoul.mouse_radius,self,false,false))
+            if(collision_circle(obj_player_ghoul.x,obj_player_ghoul.y,obj_player_ghoul.player_possess_radius,self,false,false) && collision_circle(mouse_x,mouse_y,obj_player_ghoul.mouse_radius,self,false,false))
             {
                 selected = true;
                 if((keyboard_check_pressed(vk_space)))
@@ -142,7 +142,10 @@ function scr_NormalWeapon()
                         my_weapon.possessed = false;
                         in_weapon = false;
                         scr_WeaponSwap(other);
-                        //show_debug_message(string(my_weapon) + " " + string(at_weapon))
+                        if(global.debug)
+                        {
+                            show_debug_message(string(my_weapon) + " " + string(at_weapon))
+                        }
                     }
                 }
             }
@@ -183,7 +186,29 @@ function scr_BigGun()
                 }
                 else
                 {
-                    if(weapon_type == "biggun2")
+                    image_index = 0;
+                    image_speed = 0;
+                    audio_stop_sound(snd_turret_fire_loop);
+                }
+            }
+            else 
+            {
+                if(weapon_type == "biggun2")
+                {
+                    if(mouse_check_button(mb_left)) //regular shot
+                    {
+                        if(firedelay < 0)
+                        {
+                            scr_shootBullet(id);
+                            image_speed = 0.6;
+                        }
+                        
+                        if(!audio_is_playing(snd_turret_fire_loop)) 
+                        { 
+                            audio_play_sound(snd_turret_fire_loop,0,true);
+                        }
+                    }
+                    else
                     {
                         image_index = 0;
                         image_speed = 0;
@@ -229,7 +254,7 @@ function scr_BigGun()
         
         if(instance_exists(obj_player_ghoul))
         {
-            if(collision_circle(x,y,obj_player_ghoul.player_possess_radius,self,false,false) && collision_circle(mouse_x,mouse_y,obj_player_ghoul.mouse_radius,self,false,false))
+            if(collision_circle(obj_player_ghoul.x,obj_player_ghoul.y,obj_player_ghoul.player_possess_radius,self,false,false) && collision_circle(mouse_x,mouse_y,obj_player_ghoul.mouse_radius,self,false,false))
             {
                 selected = true;
                 if((keyboard_check_pressed(vk_space)))
@@ -240,7 +265,10 @@ function scr_BigGun()
                         my_weapon.possessed = false;
                         in_weapon = false;
                         scr_WeaponSwap(other);
-                        //show_debug_message(string(my_weapon) + " " + string(at_weapon))
+                        if(global.debug)
+                        {
+                            show_debug_message(string(my_weapon) + " " + string(at_weapon))
+                        }
                     }
                 }
             }

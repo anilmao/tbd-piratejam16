@@ -7,7 +7,7 @@ if(target)
 }
 
 var enemy = instance_place(x,y,obj_enemy);
-if(enemy)
+if(enemy && !enemy_bullet)
 {
     with(enemy)
     {

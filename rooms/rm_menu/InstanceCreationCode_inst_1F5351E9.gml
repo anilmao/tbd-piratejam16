@@ -1,0 +1,2 @@
+type = "settings";
+text = "Options";

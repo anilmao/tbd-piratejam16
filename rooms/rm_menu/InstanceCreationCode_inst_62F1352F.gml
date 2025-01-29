@@ -1,0 +1,2 @@
+type = "back";
+text = "Back";

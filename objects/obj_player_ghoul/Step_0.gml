@@ -1,22 +1,5 @@
 if(in_weapon)
 {
-    /*
-    var hover = instance_position(mouse_x,mouse_y,obj_weapon);
-    
-    if((keyboard_check_pressed(vk_space)))
-    {
-        with(hover)
-        {
-            if(collision_circle(x,y,obj_player_ghoul.player_possess_radius,obj_player_ghoul,false,true) && hover.id != other.my_weapon.id)
-            {
-                other.my_weapon.possessed = false;
-                other.at_weapon = false;
-                scr_WeaponSwap(hover);
-            }
-        }
-    }
-     */
-    
     if(at_weapon)
     {
         x = my_weapon.x;

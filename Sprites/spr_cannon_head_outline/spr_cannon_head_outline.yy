@@ -24,7 +24,7 @@
   ],
   "name":"spr_cannon_head_outline",
   "nineSlice":null,
-  "origin":9,
+  "origin":4,
   "parent":{
     "name":"FX",
     "path":"folders/Sprites/FX.yy",
@@ -76,7 +76,7 @@
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":13,
+    "xorigin":9,
     "yorigin":5,
   },
   "swatchColours":null,
