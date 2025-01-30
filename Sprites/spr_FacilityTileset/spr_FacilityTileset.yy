@@ -2,7 +2,7 @@
   "$GMSprite":"",
   "%Name":"spr_FacilityTileset",
   "bboxMode":0,
-  "bbox_bottom":127,
+  "bbox_bottom":175,
   "bbox_left":0,
   "bbox_right":143,
   "bbox_top":12,
@@ -12,14 +12,14 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"a9f9c3eb-ee45-4062-af69-38552637256c","name":"a9f9c3eb-ee45-4062-af69-38552637256c","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"de80d754-c34a-43c8-b9aa-ff286faa6166","name":"de80d754-c34a-43c8-b9aa-ff286faa6166","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
   "height":192,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"bcc63060-c678-45b8-a519-a6c2c062e767","blendMode":0,"displayName":"default","isLocked":false,"name":"bcc63060-c678-45b8-a519-a6c2c062e767","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"8efb5f9e-1df1-4f31-8cf4-70e4f2229515","blendMode":0,"displayName":"default","isLocked":false,"name":"8efb5f9e-1df1-4f31-8cf4-70e4f2229515","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"spr_FacilityTileset",
   "nineSlice":null,
@@ -69,8 +69,8 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"a9f9c3eb-ee45-4062-af69-38552637256c","path":"sprites/spr_FacilityTileset/spr_FacilityTileset.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"5b91ec9d-e295-4e1a-99cb-908ab2c96733","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"de80d754-c34a-43c8-b9aa-ff286faa6166","path":"sprites/spr_FacilityTileset/spr_FacilityTileset.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"42ac9965-2abb-4c2a-a671-c84c1435d40f","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

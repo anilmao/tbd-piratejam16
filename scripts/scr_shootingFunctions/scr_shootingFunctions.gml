@@ -20,6 +20,8 @@ function scr_shootBullet(obj_id)
             firedelay = 9;
             with(instance_create_layer(x,y,"Bullets",obj_bullet))
             {
+                if(other.weapon_type == "biggun1")
+                    cannonball = true;
                 speed = other.bullet_speed;
                 direction = other.image_angle;
                 image_angle = direction;

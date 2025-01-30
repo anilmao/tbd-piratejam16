@@ -16,3 +16,4 @@ selected = false;
 outline_sprite = -1;
 fake_angle = 0;
 image_speed = 0;
+anchored = false;

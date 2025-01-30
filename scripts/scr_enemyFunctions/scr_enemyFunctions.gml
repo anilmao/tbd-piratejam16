@@ -83,6 +83,7 @@ function scr_enemy_alert()
                     image_angle = direction;
                 }
                 shoot_timer = shoot_time;
+                audio_play_sound(snd_pistol_fire,0,false,0.35,undefined,random_range(0.8,1.2));
             }
             else 
             {   
@@ -94,6 +95,7 @@ function scr_enemy_alert()
                     image_angle = direction;
                 }
                 shoot_timer = shoot_time;
+                audio_play_sound(snd_shotgun_fire,0,false,0.35,undefined,random_range(0.8,1.2));
             }
         }
     }

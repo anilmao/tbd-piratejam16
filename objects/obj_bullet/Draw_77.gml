@@ -1,16 +1,18 @@
+if(cannonball)
+{
+    sprite_index = spr_cannonball;
+}
 if(energy_bullet)
 {
     sprite_index = spr_bullet_energy;
 }
-else 
-{
-    sprite_index = spr_bullet;
-}
 
-var target = instance_place(x,y,obj_target); //remove this later
+
+var target = instance_place(x,y,obj_door); //remove this later
 if(target)
 {
-    instance_create_layer(target.x, target.y, "Gun", obj_pistol);
+    instance_create_layer(target.x, target.y, "Bullets", obj_explosion);
+    audio_play_sound(snd_explosion,1,false);
     instance_destroy(target);
     instance_destroy();
 }
@@ -23,7 +25,7 @@ if(enemy && !enemy_bullet)
         if(enemy_state != "dead")
         { 
             enemy_state = "dead";
-            if(other.energy_bullet == false)
+            if(other.energy_bullet == false && other.cannonball == false)
             {
                 instance_destroy(other);
             }

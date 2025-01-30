@@ -71,26 +71,32 @@ function scr_NormalWeapon()
         }
         
         // Horizontal Collision
-        if(place_meeting(x + h_speed, y, obj_collisionBlock))
+        if(!anchored)
         {
-            while(!place_meeting(x+sign(h_speed),y,obj_collisionBlock))
-            {
-                x = x + sign(h_speed) 
-            }    
-            h_speed = 0;
+            if(place_meeting(x + h_speed, y, obj_collisionBlock))
+                    {
+                        while(!place_meeting(x+sign(h_speed),y,obj_collisionBlock))
+                        {
+                            x = x + sign(h_speed) 
+                        }    
+                        h_speed = 0;
+                    }
+                    x = x + h_speed; 
         }
-        x = x + h_speed;
         
         // Vertical Collision
-        if(place_meeting(x, y + v_speed, obj_collisionBlock))
+        if(!anchored)
         {
-            while(!place_meeting(x,y+sign(v_speed),obj_collisionBlock))
+            if(place_meeting(x, y + v_speed, obj_collisionBlock))
             {
-                y = y + sign(v_speed)
-            }    
-            v_speed = 0;
+                while(!place_meeting(x,y+sign(v_speed),obj_collisionBlock))
+                {
+                    y = y + sign(v_speed)
+                }    
+                v_speed = 0;
+            }
+            y = y + v_speed;
         }
-        y = y + v_speed;
         
         if(mouse_x < x)
         {
@@ -119,39 +125,45 @@ function scr_NormalWeapon()
     { 
         persistent = false;
         
-        if(grounded)
+        if(!anchored)
         {
-            h_speed = 0;
-            v_speed = 0;
-        }
-        else
-        {
-            y += 3; //Apply Gravity but shittier
+            if(grounded)
+            {
+                h_speed = 0;
+                v_speed = 0;
+            }
+            else
+            {
+                y += 3; //Apply Gravity but shittier
+            }
         }
         
         if(instance_exists(obj_player_ghoul))
         {
-            if(collision_circle(obj_player_ghoul.x,obj_player_ghoul.y,obj_player_ghoul.player_possess_radius,self,false,false) && collision_circle(mouse_x,mouse_y,obj_player_ghoul.mouse_radius,self,false,false))
+            if(obj_player_ghoul.my_weapon != noone)
             {
-                selected = true;
-                if((keyboard_check_pressed(vk_space)))
+                if(collision_circle(obj_player_ghoul.x,obj_player_ghoul.y,obj_player_ghoul.player_possess_radius,self,false,false) && collision_circle(mouse_x,mouse_y,obj_player_ghoul.mouse_radius,self,false,false) && obj_player_ghoul.my_weapon.weapon_type != "energy")
                 {
-                    keyboard_clear(vk_space);
-                    with(obj_player_ghoul)
+                    selected = true;
+                    if((keyboard_check_pressed(vk_space)))
                     {
-                        my_weapon.possessed = false;
-                        in_weapon = false;
-                        scr_WeaponSwap(other);
-                        if(global.debug)
+                        keyboard_clear(vk_space);
+                        with(obj_player_ghoul)
                         {
-                            show_debug_message(string(my_weapon) + " " + string(at_weapon))
+                            my_weapon.possessed = false;
+                            in_weapon = false;
+                            scr_WeaponSwap(other);
+                            if(global.debug)
+                            {
+                                show_debug_message(string(my_weapon) + " " + string(at_weapon))
+                            }
                         }
                     }
                 }
-            }
-            else
-            {
-                selected = false;
+                else
+                {
+                    selected = false;
+                }
             }
         }
     }
@@ -169,7 +181,7 @@ function scr_BigGun()
         
         if(can_shoot)
         {
-            if(weapon_type == "biggun2")
+            if(weapon_type == "biggun1")
             {
                 if(mouse_check_button(mb_left)) //regular shot
                 {
@@ -179,10 +191,8 @@ function scr_BigGun()
                         image_speed = 0.6;
                     }
                     
-                    if(!audio_is_playing(snd_turret_fire_loop)) 
-                    { 
-                        audio_play_sound(snd_turret_fire_loop,0,true);
-                    }
+                    audio_play_sound(snd_cannon,0,false);
+
                 }
                 else
                 {
