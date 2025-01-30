@@ -34,3 +34,28 @@ if(room == rm_menu)
 {
     layer_background_alpha(layer_background_get_id(layer_get_id("bg_scroll")), bg_scroll_alpha)
 }
+
+if(keyboard_check_pressed(ord("H")))
+{
+    if(!show_tips)
+    {
+        show_tips = true;
+    }
+    else 
+    {
+        show_tips = false;
+    }
+}
+
+if(room == rm_level1_2)
+{
+    if(!instance_exists(obj_enemy))
+    {
+        with(obj_hints)
+        {
+            msg_num = 6;
+            msg_timer = 600;
+            hint = 0;
+        }
+    }
+}

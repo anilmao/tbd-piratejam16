@@ -43,4 +43,7 @@ if(at_weapon)
     }
 }
 
-draw_circle_color(mouse_x,mouse_y,mouse_radius,c_lime,c_lime,true);
+if(global.debug)
+{
+    draw_circle_color(mouse_x,mouse_y,mouse_radius,c_lime,c_lime,true);
+}

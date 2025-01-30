@@ -1,0 +1,12 @@
+event_inherited();
+weapon_type = "energy";
+weapon_recoil = 6;
+ammo_max = 1000;
+ammo_count = ammo_max;
+bullet_type = "energy";
+bullet_damage = 1;
+bullet_speed = 4;
+possessed = false;
+can_shoot = true;
+outline_sprite = spr_pistol_outline;
+image_speed = 0;

@@ -37,3 +37,16 @@ else
         } 
     }
 }
+
+if(my_weapon != noone)
+{
+    if(my_weapon.ammo_count <= 0) //Is it annoying? yes. Does it work? Dont even ask.
+    {
+        with(obj_hints)
+        {
+            msg_num = 7;
+            msg_timer = 600;
+            hint = 0;
+        }
+    }
+}

@@ -14,4 +14,5 @@ grounded = false;
 firedelay = 0;  //in frames
 selected = false;
 outline_sprite = -1;
+fake_angle = 0;
 image_speed = 0;

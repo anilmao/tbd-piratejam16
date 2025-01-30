@@ -16,13 +16,13 @@
     {"name":"inst_737A1958","path":"rooms/rm_debug/rm_debug.yy",},
     {"name":"inst_2434199B","path":"rooms/rm_debug/rm_debug.yy",},
     {"name":"inst_7A477B1","path":"rooms/rm_debug/rm_debug.yy",},
-    {"name":"inst_304F03BD","path":"rooms/rm_debug/rm_debug.yy",},
     {"name":"inst_4C432364","path":"rooms/rm_debug/rm_debug.yy",},
     {"name":"inst_74FC559B","path":"rooms/rm_debug/rm_debug.yy",},
     {"name":"inst_DBD75ED","path":"rooms/rm_debug/rm_debug.yy",},
     {"name":"inst_457A08F2","path":"rooms/rm_debug/rm_debug.yy",},
     {"name":"inst_1D8AE542","path":"rooms/rm_debug/rm_debug.yy",},
     {"name":"inst_6EF752EF","path":"rooms/rm_debug/rm_debug.yy",},
+    {"name":"inst_553BC466","path":"rooms/rm_debug/rm_debug.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -39,11 +39,8 @@
         {"$GMRInstance":"v1","%Name":"inst_4CBE3D44","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_4CBE3D44","objectId":{"name":"obj_pistol","path":"objects/obj_pistol/obj_pistol.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":80.0,"y":152.0,},
         {"$GMRInstance":"v1","%Name":"inst_737A1958","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_737A1958","objectId":{"name":"obj_pistol","path":"objects/obj_pistol/obj_pistol.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":400.0,"y":72.0,},
         {"$GMRInstance":"v1","%Name":"inst_7A477B1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_7A477B1","objectId":{"name":"obj_turret","path":"objects/obj_turret/obj_turret.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":272.0,"y":64.0,},
-        {"$GMRInstance":"v1","%Name":"inst_304F03BD","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_304F03BD","objectId":{"name":"obj_turret","path":"objects/obj_turret/obj_turret.yy",},"properties":[
-            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_weapon","path":"objects/obj_weapon/obj_weapon.yy",},"propertyId":{"name":"flipped","path":"objects/obj_weapon/obj_weapon.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"-1",},
-            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_weapon","path":"objects/obj_weapon/obj_weapon.yy",},"propertyId":{"name":"ammo_count","path":"objects/obj_weapon/obj_weapon.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"999",},
-          ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":232.0,"y":144.0,},
         {"$GMRInstance":"v1","%Name":"inst_1D8AE542","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_1D8AE542","objectId":{"name":"obj_cannon","path":"objects/obj_cannon/obj_cannon.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":136.0,"y":144.0,},
+        {"$GMRInstance":"v1","%Name":"inst_553BC466","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_553BC466","objectId":{"name":"obj_energy_weapon","path":"objects/obj_energy_weapon/obj_energy_weapon.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":168.0,"y":152.0,},
       ],"layers":[],"name":"Gun","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRTileLayer":"","%Name":"Foreground","depth":400,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Foreground","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":12,"SerialiseWidth":28,"TileCompressedData":[
           -61,-2147483648,-5,0,-22,-2147483648,-7,0,2,-2147483648,0,-19,-2147483648,-8,0,-4,-2147483648,4,5,6,

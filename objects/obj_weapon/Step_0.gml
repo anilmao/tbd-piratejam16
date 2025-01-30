@@ -5,6 +5,7 @@ switch(weapon_type)
 {
     case "pistol":
     case "shotgun":
+    case "energy":    
         scr_NormalWeapon()
     break;
     case "biggun1":

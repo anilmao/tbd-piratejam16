@@ -2,7 +2,7 @@
 scr_ScaleGame(); //scales the game in-browser
 
 global.player_score = 0;
-global.debug = true; //turn this off before the release!!!
+global.debug = false; //turn this off before the release!!!
 global.show_ui = true; //show AMMO UI?
 game_paused = false; //is the game paused?
 game_pause_surf = -1;

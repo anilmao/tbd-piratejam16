@@ -1,1 +1,0 @@
-enemy_weapon_type = 1;

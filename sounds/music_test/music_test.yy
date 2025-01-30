@@ -2,8 +2,8 @@
   "$GMSound":"",
   "%Name":"music_test",
   "audioGroupId":{
-    "name":"audiogroup_default",
-    "path":"audiogroups/audiogroup_default",
+    "name":"ag_Music",
+    "path":"audiogroups/ag_Music",
   },
   "bitDepth":1,
   "bitRate":128,

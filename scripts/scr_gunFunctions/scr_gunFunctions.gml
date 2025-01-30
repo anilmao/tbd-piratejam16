@@ -50,7 +50,7 @@ function scr_NormalWeapon()
                             audio_play_sound(snd_shotgun_fire,0,false,1,undefined,random_range(0.8,1.2));
                         break;
                         case "energy": //ending weapon 
-                               
+                            audio_play_sound(snd_energy_weapon_fire,0,false,1,undefined,random_range(0.8,1.2)); 
                         break;
                     }
                 }

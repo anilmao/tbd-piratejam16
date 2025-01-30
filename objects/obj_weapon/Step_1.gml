@@ -7,9 +7,10 @@ if(possessed)
     {
         case "pistol":
         case "shotgun":
+        case "energy":    
             var _ang = point_direction(x, y, mouse_x, mouse_y);
-            var _diff = angle_difference(_ang, image_angle);
-            image_angle += median(-25, _diff, 25);
+            var _diff = angle_difference(_ang, fake_angle);
+            fake_angle += median(-25, _diff, 25);
         break;
         case "biggun1":
         case "biggun2":
