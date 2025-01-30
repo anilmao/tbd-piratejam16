@@ -1,5 +1,5 @@
 in_weapon = false;
-player_possess_radius = 50;
+player_possess_radius = 75;
 mouse_radius = 5;
 my_weapon = noone;
 nearest_inst = noone;
