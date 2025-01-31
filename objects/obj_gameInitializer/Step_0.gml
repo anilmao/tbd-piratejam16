@@ -59,3 +59,5 @@ if(room == rm_level1_2)
         }
     }
 }
+
+window_set_size(browser_width,browser_height);

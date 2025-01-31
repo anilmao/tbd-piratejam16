@@ -1,8 +1,10 @@
 if(room != rm_menu)
 {
-    if(room != rm_debug)
-    {
-        hint = 0;
-        msg_timer = 600;
-    }
+    hint = 0;
+    msg_timer = 600;
+}
+else
+{
+    hint = -1;
+    msg_timer = -25;
 }

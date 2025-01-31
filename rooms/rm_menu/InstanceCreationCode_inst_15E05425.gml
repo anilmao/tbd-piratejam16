@@ -1,2 +1,0 @@
-type = "exit";
-text = "Quit";

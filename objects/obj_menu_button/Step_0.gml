@@ -5,8 +5,7 @@ if(mouse_check_button_pressed(mb_left))
         switch(type) //button.....state machine?
         {
             case "play":
-            scr_warp(rm_debug,40,128,0.5, #eeffcc);
-            //scr_warp(rm_tut_begin,104,24,0.5, #eeffcc); //PUT PLAYER GHOUL AND A GUN AT THE BEGINNING OF rm_tut_begin
+                scr_warp(rm_tut_begin,40,120,0.5, #eeffcc);
             break;
             case "settings":
             obj_gameInitializer.menu_page = 1;
