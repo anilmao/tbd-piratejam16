@@ -1,0 +1,1 @@
+ghoul_number = 0;

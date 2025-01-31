@@ -1,6 +1,6 @@
 function scr_enemy_chill()
 {
-    if(collision_line(x,y,obj_player_ghoul.x,obj_player_ghoul.y,obj_player_ghoul,false,true) && !collision_line(x,y,obj_player_ghoul.x,obj_player_ghoul.y,obj_collisionBlock,false,true))
+    if(collision_line(x,y,obj_player_ghoul.x,obj_player_ghoul.y,obj_player_ghoul,false,true) && !collision_line(x,y,obj_player_ghoul.x,obj_player_ghoul.y,[obj_collisionBlock, obj_door],false,true))
     {
         if(enemy_weapon_type != 0)
         {
