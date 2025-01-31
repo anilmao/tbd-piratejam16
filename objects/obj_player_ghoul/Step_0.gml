@@ -1,9 +1,12 @@
 if(in_weapon)
 {
-    if(at_weapon)
+    if(my_weapon != noone)
     {
-        x = my_weapon.x;
-        y = my_weapon.y;
+        if(at_weapon)
+        {
+            x = my_weapon.x;
+            y = my_weapon.y;
+        }
     }
 }
 else
