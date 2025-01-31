@@ -7,13 +7,27 @@ if(energy_bullet)
     sprite_index = spr_bullet_energy;
 }
 
-
 var target = instance_place(x,y,obj_door); //remove this later
 if(target)
 {
-    instance_create_layer(target.x, target.y, "Bullets", obj_explosion);
-    audio_play_sound(snd_explosion,1,false);
-    instance_destroy(target);
+    if(cannonball or energy_bullet)
+    {
+        instance_create_layer(target.x, target.y, "Bullets", obj_explosion);
+        audio_play_sound(snd_explosion,1,false);
+        instance_destroy(target);
+    }
+    instance_destroy();
+}
+
+target = instance_place(x,y,obj_cage); //remove this later
+if(target)
+{
+    if(cannonball or energy_bullet)
+    {
+        instance_create_layer(target.x, target.y, "Bullets", obj_explosion);
+        audio_play_sound(snd_explosion,1,false);
+        instance_destroy(target);
+    }
     instance_destroy();
 }
 
